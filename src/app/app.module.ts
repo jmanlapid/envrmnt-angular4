@@ -6,7 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ApiService } from './shared';
+import { DashboardComponent } from './dashboard/dashboard.component'
+// import { ApiService } from './shared';
+import { Auth } from './shared/auth.service';
+import { AuthGuard } from './shared/auth-guard.service';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -21,10 +24,12 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   providers: [
-    ApiService
+    Auth,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

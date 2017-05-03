@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { USERS } from './mock-users'
+import { USERS } from './mock-users';
 
 @Injectable()
-export class UserAuthService {
+export class Auth {
   public username: string;
 
   constructor() {
@@ -14,6 +14,8 @@ export class UserAuthService {
   }
 
   isLoggedIn() {
+    console.log('Auth.isLoggedIn value', localStorage.getItem('USERNAME'));
+    console.log('Auth.isLoggedIn typeof', typeof localStorage.getItem('USERNAME'));
     return typeof localStorage.getItem('USERNAME') === 'string'
   }
 
