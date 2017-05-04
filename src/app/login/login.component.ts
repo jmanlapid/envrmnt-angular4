@@ -9,14 +9,13 @@ import { Auth } from '../shared/auth.service'
   providers: [
     Auth
   ],
-  // styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-    public router: Router,
-    public service: Auth
+    private router: Router,
+    private service: Auth
   ) { }
 
   ngOnInit() {

@@ -10,7 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 // import { ApiService } from './shared';
 import { Auth } from './shared/auth.service';
 import { AuthGuard } from './shared/auth-guard.service';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -19,7 +19,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BrowserModule,
     HttpModule,
     ReactiveFormsModule,
-    routing
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

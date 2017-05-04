@@ -1,8 +1,11 @@
 <header>
   <nav>
     <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['login']">Login</a>
-    <a [routerLink]="['dashboard']">Dashboard</a>
+    <a *ngIf="!auth.isLoggedIn()" (click)="logIn()">Login</a>
+    <span *ngIf="auth.isLoggedIn()">
+      <a [routerLink]="['dashboard']">Dashboard</a>
+      <a (click)="logOut()">Log out</a>
+    </span>
   </nav>
 </header>
 <main>

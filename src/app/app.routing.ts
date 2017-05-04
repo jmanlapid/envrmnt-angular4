@@ -1,3 +1,4 @@
+import { NgModule }              from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -6,7 +7,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './shared/auth-guard.service';
 
 const routes: Routes = [
-  // Add the redirect
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard',
@@ -15,4 +15,13 @@ const routes: Routes = [
   }
 ];
 
-export const routing = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+
+export class AppRoutingModule {}

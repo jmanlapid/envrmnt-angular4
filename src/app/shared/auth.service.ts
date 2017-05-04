@@ -14,9 +14,7 @@ export class Auth {
   }
 
   isLoggedIn() {
-    console.log('Auth.isLoggedIn value', localStorage.getItem('USERNAME'));
-    console.log('Auth.isLoggedIn typeof', typeof localStorage.getItem('USERNAME'));
-    return typeof localStorage.getItem('USERNAME') === 'string'
+    return typeof localStorage.getItem('USERNAME') === 'string';
   }
 
   logIn(username: string, password: string) {
@@ -28,7 +26,8 @@ export class Auth {
     return false;
   }
 
-  logout() {
-    localStorage.removeItem('USERNAME')
+  logOut() {
+    localStorage.removeItem('USERNAME');
+    this.username = null;
   }
 }
