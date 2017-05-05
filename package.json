@@ -23,7 +23,7 @@
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
     "postinstall": "npm run webdriver-update",
-    "version": "npm run build && git add -A -f dist",
+    "version": "npm run build && git add -A -f dist"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
