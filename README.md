@@ -1,3 +1,25 @@
+# Envrment Angular 4 Assignment
+
+## Requirements
+
+#### 1) Create a single page Angular2 app with 3 views : Home page, Login page and dashboard page; using dummy json data as model data.
+I used the [angular-webpack starter](https://github.com/preboot/angular-webpack) to get up and running fast. Each page is a component which is router'ed into the main `AppComponent`. The dummy json data `mock-users` and `mock-videos` are located in `./src/app/shared` which are injected into the `Auth` service and `DashboardComponent`, respectively.
+
+#### A) Router in HTML5MODE and support customized navigation: for example, if user visits dashboard page without login, redirect to home page. If user login via Home-Login- Dashboard, at this point, back key will go back to Home, not Login page;
+If the user is on Home and they click the Login link at the top left as handled in the `AppComponent`, a special router config flag  `this.router.navigate(['/login'], { skipLocationChange: true });` prevents the user going back the login page from dashboard. I implemented `canActivate` router feature used to prevent user from going into `/dashboard` without being logged in.
+
+#### B) Create a vrplayer component directive, <vrplayer></vrplayer>, which take options:{url:videoUrl} . to make it simple, define your own dummy player JS library, which may have play(), stop(), pause() functions.
+I combined these requirements with `D` to reduce redundancy such that the `<vrplayer [url]="video.id">` is a wrapper around the YouTubes api where `video.id` is the `id` of the YouTube video. It has the basic play, stop, and pause functions like any other video player. The YouTube player is available on the dashboard page after logging in. The player defaults to the first item on the list. Clicking any name in the list will load that video into the player.
+
+#### C) Provide a build system/script so the files are concatenate and minified with version #.
+Running the basic [npm version](npm versioning) CLI tool will trigger the version npm script `npm run build && git add -A -f dist`. This does the build process which concatenates everything via webpack and bumps the `package.json` version according to the previous command.
+
+#### D) 2. For candidates without WebGL experience: Create a video player using YouTubes api.
+These requirements were combined with `B` to reduce redundancy. I installed the `@types/youtube` for registering typings and `ng2-youtube-player` for the youtube player api.
+
+~~1. For candidates who only have WebGL experience: Create a component directive, which allows a user to add the Cubenado(detail see Cubenado Assignment) using a customized HTML tag < cubenado ></ cubenado >. This tag will accept cube number and speed/
+randomness as options.~~
+
 # angular-webpack
 
 [![Dependency Status](https://david-dm.org/preboot/angular-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular-webpack/dev-status.svg)](https://david-dm.org/preboot/angular-webpack#info=devDependencies)
