@@ -12,7 +12,7 @@ If the user is on Home and they click the Login link at the top left as handled 
 I combined these requirements with `D` to reduce redundancy such that the `<vrplayer [url]="video.id">` is a wrapper around the YouTubes api where `video.id` is the `id` of the YouTube video. It has the basic play, stop, and pause functions like any other video player. The YouTube player is available on the dashboard page after logging in. The player defaults to the first item on the list. Clicking any name in the list will load that video into the player.
 
 #### C) Provide a build system/script so the files are concatenate and minified with version #.
-Running the basic [npm version](npm versioning) CLI tool will trigger the version npm script `npm run build && git add -A -f dist`. This does the build process which concatenates everything via webpack and bumps the `package.json` version according to the previous command.
+Running the basic [npm version](npm versioning) CLI tool will trigger the version npm script `npm run build && git add -A -f dist`. This does the build process which concatenates everything via webpack and bumps the `package.json` version according to the previous command. The build is located in the `./dist` directory.
 
 #### D) 2. For candidates without WebGL experience: Create a video player using YouTubes api.
 These requirements were combined with `B` to reduce redundancy. I installed the `@types/youtube` for registering typings and `ng2-youtube-player` for the youtube player api.
