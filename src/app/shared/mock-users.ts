@@ -1,3 +1,3 @@
-export var USERS = {
-  "test": "123"
-}
+export const USERS = {
+  'test': '123'
+};
