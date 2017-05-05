@@ -22,7 +22,9 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
-    "postinstall": "npm run webdriver-update"
+    "postinstall": "npm run webdriver-update",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags && rm -rf dist"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
