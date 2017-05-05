@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
-// import { ApiService } from './shared';
 import { Auth } from './shared/auth.service';
 import { AuthGuard } from './shared/auth-guard.service';
 import { AppRoutingModule } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { VrPlayerComponent } from './vr-player/vr-player.component';
 
 @NgModule({
   imports: [
@@ -25,13 +26,14 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    VrPlayerComponent
   ],
   providers: [
     Auth,
     AuthGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
   constructor(public appRef: ApplicationRef) {}

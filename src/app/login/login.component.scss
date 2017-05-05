@@ -1,0 +1,32 @@
+.login-form {
+  .login-form__group {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .login-form__label {
+    font-size: 1.6em;
+  }
+
+  .login-form__input {
+    height: 1.8em;
+    width: 16em;
+    text-align: left;
+    margin-left:0.4em;
+    font-size: 1.2em;
+    padding-left: 0.6em;
+  }
+
+  .login-form__button {
+    height: 3em;
+    width: 12em;
+    border: none;
+    background-color: #FA6900;
+    color: white;
+    margin-top: 2em;
+    font-size: 1em;
+  }
+
+
+}

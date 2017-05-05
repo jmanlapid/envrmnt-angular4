@@ -6,6 +6,7 @@ import { Auth } from '../shared/auth.service'
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   providers: [
     Auth
   ],
