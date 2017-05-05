@@ -1,8 +1,11 @@
 .login-form {
+  margin-top: 2em;
+
   .login-form__group {
     display: block;
     position: relative;
     width: 100%;
+    margin: 0.6em;
   }
 
   .login-form__label {

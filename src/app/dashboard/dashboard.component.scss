@@ -1,0 +1,14 @@
+.dashboard {
+  .dashboard__ul {
+    .dashboard__li {
+      margin: 0.6em;
+      font-size: 1.6em;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: #F38630;
+    }
+  }
+}
