@@ -14,13 +14,15 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VrPlayerComponent } from './vr-player/vr-player.component';
+import { YoutubePlayerModule } from 'ng2-youtube-player';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    YoutubePlayerModule
   ],
   declarations: [
     AppComponent,

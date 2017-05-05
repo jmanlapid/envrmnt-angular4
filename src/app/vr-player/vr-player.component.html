@@ -1,1 +1,5 @@
-<div id="player"></div>
+<youtube-player
+  [videoId]="video.id"
+  (ready)="savePlayer($event)"
+  (change)="onStateChange($event)"
+></youtube-player>

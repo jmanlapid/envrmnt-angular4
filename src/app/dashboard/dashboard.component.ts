@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VIDEOS } from '../shared/mock-videos';
+import { VrPlayerComponent } from '../vr-player/vr-player.component';
 
 @Component({
   selector: 'dashboard',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  videos: Object[];
+  selectedVideo: Object;
+
   constructor() {
-    // Do stuff
+    this.videos = VIDEOS;
+    this.selectedVideo = VIDEOS[0];
   }
 
   ngOnInit() {
-    console.log('lol i am the dashboard')
+
+  }
+
+  loadVideo(video: Object) {
+    this.selectedVideo = video;
+    VrPlayerComponent.savePlayer();
   }
 }

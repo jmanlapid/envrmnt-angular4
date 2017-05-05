@@ -1,2 +1,7 @@
 <h1>This is the dashboard component homie</h1>
-<vr-player></vr-player>
+<vr-player [video]="selectedVideo"></vr-player>
+<ul>
+  <li *ngFor="let video of videos">
+    <a (click)="loadVideo(video)">{{video.name}}</a>
+  </li>
+<ul>
