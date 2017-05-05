@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { VIDEOS } from '../shared/mock-videos';
-import { VrPlayerComponent } from '../vr-player/vr-player.component';
 
 @Component({
   selector: 'dashboard',
@@ -22,6 +21,5 @@ export class DashboardComponent implements OnInit {
 
   loadVideo(video: Object) {
     this.selectedVideo = video;
-    VrPlayerComponent.savePlayer();
   }
 }
