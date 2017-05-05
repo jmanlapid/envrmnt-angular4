@@ -23,7 +23,7 @@
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
     "postinstall": "npm run webdriver-update",
-    "version": "npm run build && git add -A dist",
+    "version": "npm run build && git add -A -F dist",
     "postversion": "git push && git push --tags && rm -rf dist"
   },
   "dependencies": {
